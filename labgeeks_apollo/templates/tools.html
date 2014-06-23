@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Tools and Forms at the Help Desk</h2>
+<ul>
+{% for form in forms %}
+    <li><a href="{{form.slug}}/">{{form.title}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
