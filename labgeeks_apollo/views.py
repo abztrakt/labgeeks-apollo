@@ -14,4 +14,4 @@ def login_issue(request):
 def tools_list(request):
     forms = Form.objects.all()
     params = {'forms': forms, 'request': request}
-    return render_to_response('tools.html', params)
+    return render_to_response('tools.html', params, context_instance=RequestContext(request))
