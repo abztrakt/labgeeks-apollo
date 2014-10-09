@@ -4,16 +4,11 @@ from django.template import RequestContext
 from forms_builder.forms.models import *
 
 @login_required
-def closing_procedures(request):
-    return render_to_response('closing-procedures.html', context_instance=RequestContext(request))
-
-@login_required
-def printer_issue(request):
-    return render_to_response('printer-issue.html', context_instance=RequestContext(request))
-
-@login_required
-def login_issue(request):
-    return render_to_response('login-issue.html', context_instance=RequestContext(request))
+def tool(request, formid):
+    import pdb; pdb.set_trace()
+    form = Form.objects.get(id=formid)
+    params = {'formid': formid, 'form': form}
+    return render_to_response('tool.html', params, context_instance=RequestContext(request))
 
 @login_required
 def tools_list(request):
