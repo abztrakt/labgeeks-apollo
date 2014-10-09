@@ -5,7 +5,6 @@ from forms_builder.forms.models import *
 
 @login_required
 def tool(request, formid):
-    import pdb; pdb.set_trace()
     form = Form.objects.get(id=formid)
     params = {'formid': formid, 'form': form}
     return render_to_response('tool.html', params, context_instance=RequestContext(request))
