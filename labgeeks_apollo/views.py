@@ -14,3 +14,7 @@ def tools_list(request):
     forms = Form.objects.all()
     params = {'forms': forms, 'request': request}
     return render_to_response('tools.html', params, context_instance=RequestContext(request))
+
+@login_required
+def tool_sent(request):
+    return render_to_response('tool_sent.html', context_instance=RequestContext(request))

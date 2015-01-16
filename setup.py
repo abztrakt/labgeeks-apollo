@@ -11,7 +11,7 @@ setup(
     install_requires = [
         'setuptools',
         'pillow',
-        'South==0.7.3',
-        'django-forms-builder==0.9',
+        'South',
+        'django-forms-builder',
     ],
 )
