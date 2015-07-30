@@ -13,5 +13,6 @@ setup(
         'pillow',
         'South',
         'django-forms-builder',
+        'compressor',
     ],
 )
